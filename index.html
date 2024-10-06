@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Fadli Aufatur Rafi</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu">
+            <a class="active" href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Portfolio</a>
+            <a href="https://github.com/auftrrafi-ai" target="_blank">Blog</a> <!-- Link Blog menuju ke GitHub -->
+        </div>
+        <div class="github">
+            <i class="fab fa-github"></i>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="profile">
+            <div class="text">
+                <p>Hello World, I'm</p>
+                <h1>M Fadli Aufatur Rafi</h1>
+                <p class="typewriter">Welcome to my personal website. 👋</p>
+            </div>
+            <div class="image">
+                <img height="200" src="image/anime.jpeg" width="200" alt="Profile Image"/>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Typewriter effect script
+        const textElement = document.querySelector('.typewriter');
+        const text = textElement.textContent;
+        textElement.textContent = '';
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                textElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, 100); // kecepatan mengetik
+            }
+        }
+
+        window.onload = type; // Mulai mengetik saat halaman dimuat
+    </script>
+</body>
+</html>
